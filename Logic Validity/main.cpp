@@ -6,9 +6,12 @@
 //
 
 #include <iostream>
+#include "premise.cpp"
+#include <string>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    std::string premise;
+    getline(std::cin, premise);
+    Premise p(premise);
     return 0;
 }
