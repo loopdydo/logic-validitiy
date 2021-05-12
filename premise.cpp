@@ -23,8 +23,6 @@ public:
         premise = p;
         if (p.length() == 1) { //The premise is an atom! We're done here.
             mainConnective = None;
-            delete left;
-            delete right;
         } else {
             //look for a connective symbol not contained in brackets
             int c = 0; //keep count of position in string
@@ -61,20 +59,20 @@ public:
                         mainConnective = Biconditional;
                         connectiveFound = true;
                         break;
-                        
+                    default:
+                        c++;
                 }
                 
-                c++;
             }
             if (p[0] == '(') { //strip brackets
                 left = new Premise(p.substr(1, c-2));
             } else {
-                left = new Premise(p.substr(0, c-1));
+                left = new Premise(p.substr(0, c));
             }
             if (p[c+1] == '(') { //strip brackets
-                right = new Premise(p.substr(c+2, p.length()-1));
+                right = new Premise(p.substr(c+2, p.length()-c-3));
             } else {
-                right = new Premise(p.substr(c+1, p.length()));
+                right = new Premise(p.substr(c+1, p.length()-c-1));
             }
         }
         
