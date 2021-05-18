@@ -16,7 +16,7 @@ class Premise {
 private:
     std::string premise;
     connective mainConnective;
-    Premise* left;
+    Premise* left; //using pointers to assign later - not handling memory yet.
     Premise* right;
 public:
     Premise (std::string p) {
