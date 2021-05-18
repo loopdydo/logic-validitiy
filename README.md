@@ -14,5 +14,7 @@ Valid input looks something like; x-(xvy)
 
 ## Goals
 
-Number one is obviously allowing multiple lines of input, and then determining validity.
+Number one is obviously determining validity based on input.
 After that, I hope to make input a little more permissive, with some basic input checking and correction.
+
+I'm using c++ to help me learn c++.
