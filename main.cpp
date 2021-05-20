@@ -6,7 +6,7 @@
 //
 
 #include <iostream>
-#include "premise.cpp"
+#include "premise.hpp"
 #include <string>
 #include <vector>
 

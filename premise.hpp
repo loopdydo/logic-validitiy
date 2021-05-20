@@ -13,12 +13,12 @@
 
 class Premise {
 private:
-    enum connective {Conjunct, Disjunct, Conditional, Biconditional, None};
     std::string premise;
-    connective mainConnective;
+public:
+    enum connective {Conjunct, Disjunct, Conditional, Biconditional, None};
     Premise* left; //using pointers to assign later - not handling memory yet.
     Premise* right;
-public:
+    connective mainConnective;
     Premise (std::string p);
 };
 
