@@ -66,5 +66,8 @@ Premise::Premise (std::string p) {
             right = new Premise(p.substr(c+1, p.length()-c-1));
         }
     }
-    std::cout << mainConnective << "\n";
+};
+
+std::string Premise::print() {
+    return premise;
 };

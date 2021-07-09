@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "premise.hpp"
+#include "solver.hpp"
 #include <string>
 #include <vector>
 
@@ -17,5 +18,6 @@ int main(int argc, const char * argv[]) {
         Premise p(premise);
         premises.push_back(p);
     }
+    Solver solver(premises);
     return 0;
 }

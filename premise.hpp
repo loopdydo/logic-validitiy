@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <string>
 
+
 class Premise {
 private:
     std::string premise;
@@ -20,6 +21,7 @@ public:
     Premise* right;
     connective mainConnective;
     Premise (std::string p);
+    std::string print();
 };
 
 #endif /* premise_hpp */
