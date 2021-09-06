@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include <vector>
 #include "premise.hpp"
-#include "solveNode.hpp"
 
 class Solver {
 private:
