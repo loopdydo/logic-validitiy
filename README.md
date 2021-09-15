@@ -1,6 +1,6 @@
 # logic-validitiy
 
-Solve the validity of logical arguments, using the tree decision procedure. Currently only meant to work with basic propositional logic.
+Solve the validity of logical arguments, using truth trees. Currently only meant to work with basic propositional logic.
 
 Currently the program takes multiple single premises (lines), and outputs a tree structure representing a logic solving tree. Only conjunction
 and disjunction are working at the moment.
@@ -12,6 +12,8 @@ v Disjunctive
 
 Valid input looks something like; x^(xvy)
 (X and X or Y).
+
+For an explanation of truth trees, including branching rules, see https://mysite.science.uottawa.ca/phofstra//MAT1348/TruthTrees.pdf .
 
 ## Goals
 
