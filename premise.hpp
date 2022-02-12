@@ -20,6 +20,7 @@ public:
     Premise* left; //using pointers to assign later - not handling memory yet.
     Premise* right;
     connective mainConnective;
+    bool negation;
     Premise (std::string p);
     std::string print();
 };

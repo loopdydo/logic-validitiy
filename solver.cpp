@@ -9,7 +9,7 @@
 #include <iostream>
 
 
-void Solver::solve() {
+std::vector<std::vector<std::vector<Premise>>> Solver::createTree() {
     /* a 3 level vector. The first vector represents each level of the tree. The second
      represents each node in a given level. The third contains the premises for that node */
     std::vector<std::vector<std::vector<Premise>>> tree;
@@ -93,18 +93,12 @@ void Solver::solve() {
             }
         }
     }
-    //print the tree
-    for (int level = 0; level < tree.size(); level++){
-        std::cout << "\n";
-        for (int node = 0; node < tree.at(level).size(); node++) {
-            for (int premiseIndex = 0; premiseIndex < tree.at(level).at(node).size(); premiseIndex++) {
-                std::cout << tree.at(level).at(node).at(premiseIndex).print() << ",";
-            }
-            std::cout << " ";
-        }
-    }
+    
+    return tree;
 }
-Solver::Solver (std::vector<Premise> premises) {
-    r = premises;
-    solve();
-};
+
+void Solver::setPremise(std::vector<Premise> premise) {
+    r = premise;
+}
+
+Solver::Solver () {};

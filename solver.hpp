@@ -15,9 +15,10 @@
 class Solver {
 private:
     std::vector<Premise> r;
-    void solve();
 public:
-    Solver(std::vector<Premise> premise);
+    Solver();
+    std::vector<std::vector<std::vector<Premise>>> createTree();
+    void setPremise(std::vector<Premise> premise);
 };
 
 #endif /* solver_hpp */

@@ -12,6 +12,12 @@
     
 Premise::Premise (std::string p) {
     premise = p;
+    if (p[0] == '!') {
+        negation = true;
+        p.erase(p.begin());
+    } else {
+        negation = false;
+    }
     if (p.length() == 1) { //The premise is an atom! We're done here.
         mainConnective = None;
     } else {
